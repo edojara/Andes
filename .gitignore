@@ -1,0 +1,48 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración locales
+.env.local
+.env.*.local
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+
+# Archivos de editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos de backup
+*.bak
+*.backup
+
+# Archivos de Node.js (si se usa en el futuro)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de PHP (si se usa en el futuro)
+vendor/
+composer.lock
+
+# Archivos de Python (si se usa en el futuro)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Archivos de base de datos
+*.sql
+*.sqlite
+*.db

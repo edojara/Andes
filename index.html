@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor LAMP - Bienvenido</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .status {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .status-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .status-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .status-item .icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .status-item h3 {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .status-item p {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        .status-item.active {
+            border-color: #28a745;
+            background: #d4edda;
+        }
+
+        .status-item.active .icon {
+            color: #28a745;
+        }
+
+        .info-section {
+            margin-bottom: 30px;
+        }
+
+        .info-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-card h3 {
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .info-card p {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        .info-card .version {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .status {
+                flex-direction: column;
+            }
+
+            .links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Servidor LAMP</h1>
+            <p>Linux, Apache, MariaDB, PHP</p>
+        </div>
+
+        <div class="content">
+            <div class="status">
+                <div class="status-item active">
+                    <div class="icon">🌐</div>
+                    <h3>Apache</h3>
+                    <p>Activo</p>
+                </div>
+                <div class="status-item active">
+                    <div class="icon">🗄️</div>
+                    <h3>MariaDB</h3>
+                    <p>Activo</p>
+                </div>
+                <div class="status-item active">
+                    <div class="icon">⚡</div>
+                    <h3>PHP</h3>
+                    <p>Activo</p>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>📋 Información del Servidor</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Sistema Operativo</h3>
+                        <p>Ubuntu 24.04.3 LTS (Noble Numbat)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>IP del Servidor</h3>
+                        <p class="version">192.168.100.75</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Apache</h3>
+                        <p>Versión <span class="version">2.4.58</span></p>
+                    </div>
+                    <div class="info-card">
+                        <h3>MariaDB</h3>
+                        <p>Versión <span class="version">10.11.14</span></p>
+                    </div>
+                    <div class="info-card">
+                        <h3>PHP</h3>
+                        <p>Versión <span class="version">8.3.6</span></p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Firewall</h3>
+                        <p>UFW Activo</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>🔧 Módulos PHP Instalados</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Base de Datos</h3>
+                        <p>php-mysql, php-mysqli</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Imágenes</h3>
+                        <p>php-gd, php-imagick</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Texto</h3>
+                        <p>php-mbstring, php-xml</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Red</h3>
+                        <p>php-curl, php-soap</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Utilidades</h3>
+                        <p>php-zip, php-bcmath, php-intl</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="links">
+                <a href="/info.php">📊 Ver Info PHP</a>
+                <a href="/db_test.php">🗄️ Probar Base de Datos</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>✅ Servidor LAMP instalado y configurado correctamente</p>
+            <p>Última actualización: 2026-02-01</p>
+        </div>
+    </div>
+</body>
+</html>
