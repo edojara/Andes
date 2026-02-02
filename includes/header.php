@@ -21,7 +21,7 @@
             <div class="header-content">
                 <div class="logo">
                     <a href="/">
-                        <span class="logo-icon">⚽</span>
+                        <img src="/assets/images/insignea.png" alt="Club Deportivo Andes" class="logo-image">
                         <span class="logo-text">ANDES</span>
                     </a>
                 </div>

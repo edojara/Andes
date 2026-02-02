@@ -50,7 +50,7 @@ try {
                     $params[] = $partidoId;
                 }
                 
-                $query .= " ORDER BY f.fecha_subida DESC";
+                $query .= " ORDER BY f.creado_en DESC";
                 
                 if ($limit) {
                     $query .= " LIMIT ?";
