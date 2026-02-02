@@ -5,9 +5,9 @@
 
 // Configuración de la base de datos
 define('DB_HOST', 'localhost');
-define('DB_USER', 'lamp_user');
-define('DB_PASS', 'lamp_password');
-define('DB_NAME', 'lamp_test');
+define('DB_USER', 'andes_user');
+define('DB_PASS', 'andes_password_2026');
+define('DB_NAME', 'andes_club');
 define('DB_CHARSET', 'utf8mb4');
 
 /**
