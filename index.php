@@ -11,10 +11,13 @@ require_once __DIR__ . '/includes/header.php';
     <section class="hero-section">
         <div class="hero-slider">
             <div class="hero-slide active" style="background: linear-gradient(135deg, #27F53F 0%, #1ed432 100%);">
+                <img src="/assets/images/insignea.png" alt="Club Deportivo Andes" class="hero-slide-image">
             </div>
             <div class="hero-slide" style="background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);">
+                <img src="/assets/images/insignea.png" alt="Club Deportivo Andes" class="hero-slide-image">
             </div>
             <div class="hero-slide" style="background: linear-gradient(135deg, #1a1a1a 0%, #27F53F 100%);">
+                <img src="/assets/images/insignea.png" alt="Club Deportivo Andes" class="hero-slide-image">
             </div>
         </div>
         <div class="hero-dots">

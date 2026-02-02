@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Imágenes del Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .image-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .image-box {
+            border: 2px solid #333;
+            padding: 10px;
+            background: white;
+        }
+        canvas {
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #27F53F;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #1ed432;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crear Imágenes del Slider</h1>
+    <div class="image-container">
+        <div class="image-box">
+            <h3>Slide 1 - Verde (Color del Club)</h3>
+            <canvas id="canvas1" width="1200" height="500"></canvas>
+        </div>
+        <div class="image-box">
+            <h3>Slide 2 - Negro</h3>
+            <canvas id="canvas2" width="1200" height="500"></canvas>
+        </div>
+        <div class="image-box">
+            <h3>Slide 3 - Gradiente Mixto</h3>
+            <canvas id="canvas3" width="1200" height="500"></canvas>
+        </div>
+    </div>
+    <button onclick="downloadImages()">Descargar Imágenes</button>
+
+    <script>
+        function createSlide1() {
+            const canvas = document.getElementById('canvas1');
+            const ctx = canvas.getContext('2d');
+            
+            // Gradiente verde
+            const gradient = ctx.createLinearGradient(0, 0, 1200, 500);
+            gradient.addColorStop(0, '#27F53F');
+            gradient.addColorStop(1, '#1ed432');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1200, 500);
+            
+            // Agregar insignea del club
+            const img = new Image();
+            img.onload = function() {
+                ctx.drawImage(img, 550, 150, 100, 100);
+            };
+            img.src = '/assets/images/insignea.png';
+        }
+        
+        function createSlide2() {
+            const canvas = document.getElementById('canvas2');
+            const ctx = canvas.getContext('2d');
+            
+            // Fondo negro
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, 1200, 500);
+            
+            // Agregar insignea del club
+            const img = new Image();
+            img.onload = function() {
+                ctx.drawImage(img, 550, 150, 100, 100);
+            };
+            img.src = '/assets/images/insignea.png';
+        }
+        
+        function createSlide3() {
+            const canvas = document.getElementById('canvas3');
+            const ctx = canvas.getContext('2d');
+            
+            // Gradiente mixto
+            const gradient = ctx.createLinearGradient(0, 0, 1200, 500);
+            gradient.addColorStop(0, '#1a1a1a');
+            gradient.addColorStop(1, '#27F53F');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1200, 500);
+            
+            // Agregar insignea del club
+            const img = new Image();
+            img.onload = function() {
+                ctx.drawImage(img, 550, 150, 100, 100);
+            };
+            img.src = '/assets/images/insignea.png';
+        }
+        
+        function downloadImages() {
+            // Descargar slide 1
+            const canvas1 = document.getElementById('canvas1');
+            const link1 = document.createElement('a');
+            link1.download = 'slide1.jpg';
+            link1.href = canvas1.toDataURL('image/jpeg', 0.9);
+            link1.click();
+            
+            // Descargar slide 2
+            const canvas2 = document.getElementById('canvas2');
+            const link2 = document.createElement('a');
+            link2.download = 'slide2.jpg';
+            link2.href = canvas2.toDataURL('image/jpeg', 0.9);
+            link2.click();
+            
+            // Descargar slide 3
+            const canvas3 = document.getElementById('canvas3');
+            const link3 = document.createElement('a');
+            link3.download = 'slide3.jpg';
+            link3.href = canvas3.toDataURL('image/jpeg', 0.9);
+            link3.click();
+        }
+        
+        // Crear las imágenes al cargar
+        window.onload = function() {
+            createSlide1();
+            createSlide2();
+            createSlide3();
+        };
+    </script>
+</body>
+</html>
