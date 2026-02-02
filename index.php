@@ -10,8 +10,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-slider">
-            <div class="hero-slide active">
-                <img src="/assets/images/equipo1.jpg" alt="Equipo Andes" class="hero-image">
+            <div class="hero-slide active" style="background: linear-gradient(135deg, #27F53F 0%, #1ed432 100%);">
                 <div class="hero-overlay">
                     <div class="hero-content">
                         <h1 class="hero-title">Club Deportivo Andes</h1>
@@ -20,8 +19,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                 </div>
             </div>
-            <div class="hero-slide">
-                <img src="/assets/images/entrenamiento1.jpg" alt="Entrenamiento" class="hero-image">
+            <div class="hero-slide" style="background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);">
                 <div class="hero-overlay">
                     <div class="hero-content">
                         <h1 class="hero-title">Club Deportivo Andes</h1>
@@ -30,8 +28,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                 </div>
             </div>
-            <div class="hero-slide">
-                <img src="/assets/images/estadio1.jpg" alt="Estadio Andes" class="hero-image">
+            <div class="hero-slide" style="background: linear-gradient(135deg, #1a1a1a 0%, #27F53F 100%);">
                 <div class="hero-overlay">
                     <div class="hero-content">
                         <h1 class="hero-title">Club Deportivo Andes</h1>
