@@ -89,7 +89,7 @@ async function loadNextMatch() {
                     </div>
                     <div class="match-teams">
                         <div class="team home">
-                            <div class="team-logo">🏠</div>
+                            <div class="team-logo"><img src="/assets/images/insignea.png" alt="Andes" class="team-logo-image"></div>
                             <div class="team-name">Andes</div>
                         </div>
                         <div class="match-vs">VS</div>

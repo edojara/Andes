@@ -272,6 +272,15 @@ section {
     margin-bottom: var(--spacing-xs);
 }
 
+.team-logo-image {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 4px;
+    padding: 2px;
+}
+
 .team-name {
     font-weight: bold;
     font-size: 1.1rem;
