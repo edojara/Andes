@@ -9,10 +9,42 @@ require_once __DIR__ . '/includes/header.php';
 <main class="home-main">
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Club Deportivo Andes</h1>
-            <p class="hero-subtitle">Pasión, esfuerzo y compromiso en cada partido</p>
-            <a href="/pages/events.php" class="btn btn-primary">Ver Próximo Partido</a>
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <img src="/assets/images/equipo1.jpg" alt="Equipo Andes" class="hero-image">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Club Deportivo Andes</h1>
+                        <p class="hero-subtitle">Pasión, esfuerzo y compromiso en cada partido</p>
+                        <a href="/pages/events.php" class="btn btn-primary">Ver Próximo Partido</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <img src="/assets/images/entrenamiento1.jpg" alt="Entrenamiento" class="hero-image">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Club Deportivo Andes</h1>
+                        <p class="hero-subtitle">Pasión, esfuerzo y compromiso en cada partido</p>
+                        <a href="/pages/events.php" class="btn btn-primary">Ver Próximo Partido</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <img src="/assets/images/estadio1.jpg" alt="Estadio Andes" class="hero-image">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Club Deportivo Andes</h1>
+                        <p class="hero-subtitle">Pasión, esfuerzo y compromiso en cada partido</p>
+                        <a href="/pages/events.php" class="btn btn-primary">Ver Próximo Partido</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
         </div>
     </section>
 
@@ -241,6 +273,43 @@ async function loadRecentGallery() {
         `;
     }
 }
+
+// Slider de Hero
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.dot');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        dots[i].classList.remove('active');
+    });
+    
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+}
+
+// Auto-play del slider
+setInterval(nextSlide, 5000); // Cambiar cada 5 segundos
+
+// Click en los dots
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+    });
+});
 
 // Cargar todo el contenido al cargar la página
 document.addEventListener('DOMContentLoaded', function() {
